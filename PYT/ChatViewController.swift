@@ -230,6 +230,10 @@ class ChatViewController: JSQMessagesViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ChatViewController.handleDisconnectedUserUpdateNotification(_:)), name: "userWasDisconnectedNotification", object: nil)
         
         
+        
+       // self.openImages(self)
+        
+        
        
 }
 

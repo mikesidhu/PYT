@@ -39,7 +39,7 @@ class BucketListViewController: UIViewController, apiClassBucketDelegate, GMSMap
         
         super.viewDidLoad()
 
-        bucketListTable.rowHeight=60
+        bucketListTable.rowHeight=100
         
         heightOfscrollContant.constant = self.view.frame.size.height //245+bucketListTable.rowHeight*7
         
@@ -510,6 +510,7 @@ class BucketListViewController: UIViewController, apiClassBucketDelegate, GMSMap
         
         @IBOutlet weak var shadowView: UIView!
         
+        @IBOutlet weak var locationImage: UIImageView!
         
         
         

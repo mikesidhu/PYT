@@ -270,8 +270,8 @@ class imagePostViewController: UIViewController,UITableViewDataSource,UITableVie
 //                geoTagLbl.textColor = UIColor.lightGrayColor()
 //            }
 //            
-//            descriptionTV.text = "Enter description here.."
-//            descriptionTV.textColor = UIColor.lightGrayColor()
+           descriptionTV.text = "Enter description here.."
+            descriptionTV.textColor = UIColor.lightGrayColor()
             imageToPost.imageView?.contentMode = .ScaleAspectFill
             
           

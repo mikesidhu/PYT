@@ -11,3 +11,4 @@
 //#import "HMSegmentedControl/HMSegmentedControl.h"
 #import "KASlideShow.h"
 //#import <JSQMessagesViewController/JSQMessages.h>
+#import "HDNotificationView.h"

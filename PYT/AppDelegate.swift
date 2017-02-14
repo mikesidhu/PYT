@@ -46,35 +46,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
     
-    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        print("DEVICE TOKEN = \(deviceToken)")
-    }
-    
-    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        print(error)
-    }
-    
-    
-    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        print(userInfo)
-    }
+  
     
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
-        let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+//        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
+//        let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+//        
+//        
+//        application.registerUserNotificationSettings(pushNotificationSettings)
+//        application.registerForRemoteNotifications()
+        
+
+        
+         registerForPushNotifications(application)
         
         
-        application.registerUserNotificationSettings(pushNotificationSettings)
-        application.registerForRemoteNotifications()
         
         
         
-        
-        
-        //sleep(14)
         
         
         // Override point for customization after application launch.
@@ -274,6 +266,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        
+        
         return true
     }
 
@@ -314,6 +308,132 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     
+    
+    
+    //MARK: Notification Start
+    //MARK:
+    
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError)
+    {
+        print(error)
+    }
+    
+    
+    
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        
+        
+        print(deviceToken.description)
+        
+        var myToken=deviceToken.description
+        myToken=myToken.stringByReplacingOccurrencesOfString("<", withString: "")
+        myToken=myToken.stringByReplacingOccurrencesOfString(">", withString: "")
+        myToken=myToken.stringByReplacingOccurrencesOfString(" ", withString: "")
+        print("DEVICE TOKEN = \(myToken)")
+        //userDefaults.setObject(myToken, forKey: "deviceToken")
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    func registerForPushNotifications(application: UIApplication) {
+        let notificationSettings = UIUserNotificationSettings(
+            forTypes: [.Badge, .Sound, .Alert ], categories: nil)
+        
+        
+        
+        application.registerUserNotificationSettings(notificationSettings)
+        
+    }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        if notificationSettings.types != .None {
+            application.registerForRemoteNotifications()
+        }
+    }
+    
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print(userInfo)
+        
+        //        let msg = "Awf"
+        //        let msg2 = userInfo["aps"]!["alert"] as! String
+        //        let iduse = userInfo["userid"] as? String
+        
+        
+        
+        
+        
+        
+        
+        //userInfo["aps"]!["badge"] as! Int
+        
+        
+        if application.applicationState == .Active {
+            
+            
+            application.applicationIconBadgeNumber = 1
+            
+            
+            HDNotificationView.showNotificationViewWithImage(UIImage(named: "notification")!, title: "Hiii MEssage", message: "testing Notification", isAutoHide: true, onTouch: {() -> Void in
+            })
+            
+            
+        }
+        else
+        {
+            
+            let initialViewController = storyboard.instantiateViewControllerWithIdentifier("MainTabBarViewController") as! MainTabBarViewController
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+            
+            
+            
+            
+            
+            initialViewController.selectedIndex = 3
+            
+            //navController.pushViewController(myViewController, animated: true)
+            
+            
+            application.applicationIconBadgeNumber = 0
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    func application(application: UIApplication, didReceiveRemoteNotificationuserInfo: [NSObject : AnyObject])
+    {
+        print(didReceiveRemoteNotificationuserInfo)
+        
+    }
+    
+    
+    
+    
+    //MARK: Notification End
+    
+    
    
     
     
@@ -334,13 +454,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
       
         
-//        let notification = UILocalNotification()
-//        notification.alertAction = "Pyt test notification"
-//        notification.alertBody = "The Application is running in background state"
-//        notification.fireDate = NSDate(timeIntervalSinceNow: 3)
-//        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-//        
+        let notification = UILocalNotification()
+        notification.alertAction = "Pyt test notification"
+        notification.alertBody = "The Application is running in background state"
+        notification.fireDate = NSDate(timeIntervalSinceNow: 3)
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
+       
         
         
     }

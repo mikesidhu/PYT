@@ -666,7 +666,7 @@ class detailViewController: UIViewController, apiClassDelegate {
         
         //self.showMoreComments.hidden=false
         if self.reviewsArray.count<1 {
-            self.heightOfThirdView.constant = 0
+            self.heightOfThirdView.constant = 100
             //self.showMoreComments.hidden=true
         }
         
@@ -2684,9 +2684,7 @@ class detailViewController: UIViewController, apiClassDelegate {
                                 let  venues = hotelDetail.valueForKey("venue") as! NSMutableDictionary
                                 
                                 self.descriptionTextv.text=""
-                                //self.heightOfSecondView.constant = 0
-                                //self.secondView.hidden=true
-                               // self.view .setNeedsLayout()
+                                
                                 
                                 
                                 let descStRing = self.arrayWithData[0] .valueForKey("Description") as? String ?? ""
@@ -2734,40 +2732,7 @@ class detailViewController: UIViewController, apiClassDelegate {
                                     
                                     
                                     
-                               // }
-                                    /*
-                                else
-                                {
-                                    
-                                    
-                                    
-                                    
-                                    self.descriptionString=descStRing
-                                    self.descriptionTextv.editable=true
-                                   // self.descriptionString=self.locationTxtv.text
-                                  //  self.descriptionTextv.text=self.descriptionString as String
-                                    self.descriptionTextv.font=UIFont(name: "Roboto-Bold", size: 12)!
-                                    self.descriptionTextv.textColor = UIColor .lightGrayColor()
-                                    
-                                    self.descriptionTextv.editable=false
-                                    self.heightOfSecondView.constant = self.heightDescription(descStRing) //195
-
-                                    
-                                    
-                                    self.secondView.hidden=false
-                                    self.view .setNeedsLayout()
-                                    
-                                    self.showMoreDescription.hidden=true
-                                    if self.descriptionString.length>250{
-                                        self.showMoreDescription.userInteractionEnabled=true
-                                        self.showMoreDescription.hidden=false
-                                    }
-                                    
-                                    
-                                    
-
-                                    
-                                } */
+                               
                                 
                                
                                 
@@ -2825,9 +2790,7 @@ class detailViewController: UIViewController, apiClassDelegate {
                                     
                                 }
                                 
-                                self.heightOfFirstView.constant = 330 //240 + self.categoryViewHeight.constant
-                                
-                                //self.heightOfFirstView.constant = 240 + self.collectionHeightThumbnails.constant + self.categoryViewHeight.constant
+                                self.heightOfFirstView.constant = 330 //240 +
                                 
                                 
                                 
@@ -2879,10 +2842,7 @@ class detailViewController: UIViewController, apiClassDelegate {
                                     }
                                     
                                     
-                                    
-//                                    self.firstView .setNeedsLayout()
-                                    //self.view .setNeedsLayout()
-                                    //self.view .layoutIfNeeded()
+                                 
                                 }
                                 
                                 
@@ -2901,9 +2861,10 @@ class detailViewController: UIViewController, apiClassDelegate {
                             self.showMoreComments.hidden=false//show if more than 2
                             self.heightOfTableView.constant=self.detailTable.rowHeight
                            
+          /// Manage the height of reviews View here
                             
                             
-                            self.heightOfThirdView.constant = 0
+                            self.heightOfThirdView.constant = 100
                             if self.reviewsArray.count==1
                             {
                                 
@@ -2913,7 +2874,7 @@ class detailViewController: UIViewController, apiClassDelegate {
                             
                             }
                             else if self.reviewsArray.count<1{
-                                self.heightOfThirdView.constant = 0
+                                self.heightOfThirdView.constant = 100
                                 self.showMoreComments.hidden = true
                             }
                             else if self.reviewsArray.count>1{
@@ -2927,16 +2888,6 @@ class detailViewController: UIViewController, apiClassDelegate {
                             
                             
                             
-
-                            
-                        //older defined
-//                            
-//                            self.contentViewHeight.constant = 210 + self.heightOfFirstView.constant + self.heightOfSecondView.constant + self.heightOfThirdView.constant
-//                            self.view .setNeedsLayout()
-//                            self.view .layoutIfNeeded()
-                         
-                            
-                            
                             
                         
                         
@@ -2944,13 +2895,7 @@ class detailViewController: UIViewController, apiClassDelegate {
                             
                         }
                
-               //  self.updateFirstView()
                         
-                        //new defined
-//                        self.contentViewHeight.constant = 210 + self.heightOfFirstView.constant + self.heightOfSecondView.constant + self.heightOfThirdView.constant
-//                        self.view .setNeedsLayout()
-//                        self.view .layoutIfNeeded()
-                
                 }
                
 
@@ -3309,7 +3254,9 @@ class detailViewController: UIViewController, apiClassDelegate {
      
      
      }
-     else{
+     
+     else
+     {
      
      self.detailTable.rowHeight=0
      
@@ -3336,6 +3283,20 @@ class detailViewController: UIViewController, apiClassDelegate {
     
     
     
+    
+    
+    
+    
+    //MARK: ADD comment section
+    //MARK:
+    
+    
+    
+    
+    
+    
+    
+    // let locationImageStr = self.arrayWithData[0] .valueForKey("locationImage") as? String ?? ""
     
     
     

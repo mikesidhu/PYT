@@ -35,6 +35,7 @@
 		E71624311DB0F825002550CB /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E716241E1DB0F825002550CB /* RobotoCondensed-Light.ttf */; };
 		E71624321DB0F825002550CB /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E716241F1DB0F825002550CB /* RobotoCondensed-LightItalic.ttf */; };
 		E71624331DB0F825002550CB /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E71624201DB0F825002550CB /* RobotoCondensed-Regular.ttf */; };
+		E723868C1E51B73A00F554C0 /* HDNotificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E723868B1E51B73A00F554C0 /* HDNotificationView.m */; };
 		E724A9321DF7D8D50057EBD8 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E724A9311DF7D8D50057EBD8 /* loginViewController.swift */; };
 		E72A6CDC1DD5CB7F00D88AEA /* IntrestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72A6CDB1DD5CB7F00D88AEA /* IntrestTableViewCell.swift */; };
 		E736EDAB1D374E53007B342E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E736EDA91D374E53007B342E /* FBSDKCoreKit.framework */; };
@@ -102,6 +103,7 @@
 		E7D78F921E0C01AD00FF76F0 /* UserProfileDetailClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D78F911E0C01AD00FF76F0 /* UserProfileDetailClass.swift */; };
 		E7DC12EC1DE9667400BA69A1 /* apiClassInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC12EB1DE9667400BA69A1 /* apiClassInterest.swift */; };
 		E7DC12EE1DE9769000BA69A1 /* apiClassStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC12ED1DE9769000BA69A1 /* apiClassStory.swift */; };
+		E7DC54411E52CBFD00A11BA9 /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DC54401E52CBFD00A11BA9 /* AddCommentViewController.swift */; };
 		E7E680F21E36089200F4D267 /* ChatingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E680F11E36089200F4D267 /* ChatingListViewController.swift */; };
 		E7E680F51E362DCC00F4D267 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E680F41E362DCC00F4D267 /* ChatViewController.swift */; };
 		E7EBCA031DC9EA110016B2EC /* nearByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EBCA021DC9EA110016B2EC /* nearByViewController.swift */; };
@@ -169,6 +171,8 @@
 		E716241E1DB0F825002550CB /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
 		E716241F1DB0F825002550CB /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
 		E71624201DB0F825002550CB /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		E723868A1E51B73A00F554C0 /* HDNotificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HDNotificationView.h; sourceTree = "<group>"; };
+		E723868B1E51B73A00F554C0 /* HDNotificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HDNotificationView.m; sourceTree = "<group>"; };
 		E724A9311DF7D8D50057EBD8 /* loginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		E72A6CDB1DD5CB7F00D88AEA /* IntrestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrestTableViewCell.swift; sourceTree = "<group>"; };
 		E736EDA91D374E53007B342E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 		E7D78F911E0C01AD00FF76F0 /* UserProfileDetailClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileDetailClass.swift; sourceTree = "<group>"; };
 		E7DC12EB1DE9667400BA69A1 /* apiClassInterest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiClassInterest.swift; sourceTree = "<group>"; };
 		E7DC12ED1DE9769000BA69A1 /* apiClassStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = apiClassStory.swift; sourceTree = "<group>"; };
+		E7DC54401E52CBFD00A11BA9 /* AddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
 		E7E680F11E36089200F4D267 /* ChatingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatingListViewController.swift; sourceTree = "<group>"; };
 		E7E680F41E362DCC00F4D267 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E7EBCA021DC9EA110016B2EC /* nearByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nearByViewController.swift; sourceTree = "<group>"; };
@@ -412,6 +417,8 @@
 			children = (
 				E736EDA91D374E53007B342E /* FBSDKCoreKit.framework */,
 				E736EDAA1D374E53007B342E /* FBSDKLoginKit.framework */,
+				E723868A1E51B73A00F554C0 /* HDNotificationView.h */,
+				E723868B1E51B73A00F554C0 /* HDNotificationView.m */,
 				E7F112A21D75626E001DE86E /* JBKenBurnsView.swift */,
 				E737830E1D2BC96F00574452 /* MyApplication.swift */,
 			);
@@ -501,6 +508,7 @@
 				E79B319C1DBF34D6007BE529 /* detailViewController.swift */,
 				E704B7E51DCA1DD200B3A2CB /* commentsViewController.swift */,
 				E75086EF1DC1E44C007BF908 /* DescriptionViewViewController.swift */,
+				E7DC54401E52CBFD00A11BA9 /* AddCommentViewController.swift */,
 				E7EBCA021DC9EA110016B2EC /* nearByViewController.swift */,
 			);
 			name = "Detail Screen";
@@ -771,6 +779,9 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 9YDH3T82UC;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -999,6 +1010,7 @@
 				E7BA206F1D915A0100FCBB4D /* LongPressGesture.swift in Sources */,
 				E76604271E4333FF0005C875 /* SocketEngineSpec.swift in Sources */,
 				E73CC8571D39024C0022184D /* indicatorClass.swift in Sources */,
+				E723868C1E51B73A00F554C0 /* HDNotificationView.m in Sources */,
 				E79B319A1DBF2400007BE529 /* SignUpScreenViewController.swift in Sources */,
 				E7C12FD31D77EFEC00AD11B6 /* SectionTableHeaderCell.swift in Sources */,
 				E704B7E61DCA1DD200B3A2CB /* commentsViewController.swift in Sources */,
@@ -1022,6 +1034,7 @@
 				E7D603091DB60586004FBB7E /* Location.swift in Sources */,
 				E70A8E241DD4A57500F2ED23 /* KASlideShow.m in Sources */,
 				E766042B1E4333FF0005C875 /* SocketIOClient.swift in Sources */,
+				E7DC54411E52CBFD00A11BA9 /* AddCommentViewController.swift in Sources */,
 				E7F112A31D75626E001DE86E /* JBKenBurnsView.swift in Sources */,
 				E714492C1E013B1D00773BA4 /* settingsViewController.swift in Sources */,
 				E7D78F921E0C01AD00FF76F0 /* UserProfileDetailClass.swift in Sources */,
