@@ -9,7 +9,7 @@
 
 
 //var appUrl = "http://35.164.60.90/" //Live
-var appUrl = "http://pictureyourtravel.com/"  //Test
+var appUrl = "http://www.pictureyourtravel.com/"  //Test
 //var appUrl = "http://52.25.207.151/"// Live New server
 
 

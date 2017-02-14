@@ -380,7 +380,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if application.applicationState == .Active {
             
             
-            application.applicationIconBadgeNumber = 1
+          
             
             
             HDNotificationView.showNotificationViewWithImage(UIImage(named: "notification")!, title: "Hiii MEssage", message: "testing Notification", isAutoHide: true, onTouch: {() -> Void in
@@ -453,12 +453,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
        
       
-        
-        let notification = UILocalNotification()
-        notification.alertAction = "Pyt test notification"
-        notification.alertBody = "The Application is running in background state"
-        notification.fireDate = NSDate(timeIntervalSinceNow: 3)
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+//        
+//        let notification = UILocalNotification()
+//        notification.alertAction = "Pyt test notification"
+//        notification.alertBody = "The Application is running in background state"
+//        notification.fireDate = NSDate(timeIntervalSinceNow: 3)
+//        UIApplication.sharedApplication().scheduleLocalNotification(notification)
         
        
         

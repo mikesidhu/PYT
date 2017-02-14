@@ -49,6 +49,9 @@ class detailViewController: UIViewController, apiClassDelegate {
     
     
     
+    @IBOutlet weak var commentButton: UIButton!
+    
+    
     //zoomView
     
     @IBOutlet var zoomView: UIView!
@@ -626,6 +629,11 @@ class detailViewController: UIViewController, apiClassDelegate {
             self.webLinkBtnOutlet.layer.cornerRadius=3
             self.webLinkBtnOutlet.clipsToBounds=true
             
+            
+            self.commentButton.layer.borderWidth=1.0
+            self.commentButton.layer.borderColor=UIColor .blackColor().CGColor
+            self.commentButton.layer.cornerRadius=3
+            self.commentButton.clipsToBounds=true
             
             
             
@@ -3290,13 +3298,25 @@ class detailViewController: UIViewController, apiClassDelegate {
     //MARK: ADD comment section
     //MARK:
     
+    @IBAction func AddCommentAction(sender: AnyObject) {
+    
+    
+        let nxtObj2 = self.storyboard?.instantiateViewControllerWithIdentifier("AddCommentViewController") as? AddCommentViewController
+        let locationImageStr = self.arrayWithData[0] .valueForKey("locationImage") as? String ?? ""
+        
+        nxtObj2!.imgUrl=locationImageStr
+        
+        
+        self.navigationController! .pushViewController(nxtObj2!, animated: true)
+    
+    }
     
     
     
     
     
     
-    // let locationImageStr = self.arrayWithData[0] .valueForKey("locationImage") as? String ?? ""
+    //
     
     
     
