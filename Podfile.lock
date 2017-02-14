@@ -1,0 +1,92 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AWSCore (2.4.16)
+  - AWSS3 (2.4.16):
+    - AWSCore (= 2.4.16)
+  - BetterSegmentedControl (0.4)
+  - Crashlytics (3.7.2):
+    - Fabric (~> 1.6.3)
+  - DKImagePickerController (3.3.4):
+    - DKImagePickerController/Camera (= 3.3.4)
+    - DKImagePickerController/ImageManager (= 3.3.4)
+  - DKImagePickerController/Camera (3.3.4)
+  - DKImagePickerController/ImageManager (3.3.4)
+  - Fabric (1.6.7)
+  - GoogleMaps (2.1.0):
+    - GoogleMaps/Maps (= 2.1.0)
+  - GoogleMaps/Base (2.1.0)
+  - GoogleMaps/Maps (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
+  - GooglePlaces (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
+  - HMSegmentedControl (1.5.3)
+  - ImageSlideshow/Core (0.6)
+  - ImageSlideshow/SDWebImage (0.6):
+    - ImageSlideshow/Core
+    - SDWebImage (~> 3.7)
+  - IQKeyboardManager (4.0.4)
+  - JSQMessagesViewController (7.3.4):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - MBProgressHUD (1.0.0)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SwiftSpinner (0.9.5)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - AWSS3
+  - BetterSegmentedControl (~> 0.4)
+  - Crashlytics
+  - DKImagePickerController (~> 3.3.4)
+  - Fabric
+  - GoogleMaps
+  - GooglePlaces
+  - HMSegmentedControl
+  - ImageSlideshow/SDWebImage
+  - IQKeyboardManager
+  - JSQMessagesViewController
+  - MBProgressHUD (~> 1.0.0)
+  - SDWebImage (~> 3.8)
+  - SwiftSpinner
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AWSCore: 7c3c129991e6387bcbad7132bc3661e7135754db
+  AWSS3: fef6aa8f8f625df8f67f1b6574fe761f3a4ddc99
+  BetterSegmentedControl: 982368e9cae749f28b7a2e969a37dcb73c375400
+  Crashlytics: 130ab943f8c78cda7a814b434f270b2e2c8a3cba
+  DKImagePickerController: 4de1703ad3ba8bc216753447cbb00e482d8d4604
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
+  GooglePlaces: 16e96266483b8010e9f275399403647978523c86
+  HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  ImageSlideshow: 06bfd96b5e56264d2d9d38262b73e32034b85288
+  IQKeyboardManager: 4a6f83b540283c2645aaeba2bd8dc0f09b5c77f8
+  JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: f45806265dba35763258872f0faa15b3f3d9919b
+
+COCOAPODS: 1.0.1
