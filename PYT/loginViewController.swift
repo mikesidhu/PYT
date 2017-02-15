@@ -123,6 +123,11 @@ class loginViewController: UIViewController, apiClassDelegate {
                     
                 }else{
                     
+                    
+                    //device token
+                    
+                    
+                    
                     self.emailTextField .resignFirstResponder()
                     self.passwordTextField.resignFirstResponder()
                     
@@ -162,7 +167,12 @@ class loginViewController: UIViewController, apiClassDelegate {
         
         //print("Password=\(password), email=\(email)")
         
-        let parameterString = NSString(string:"email=\(emailTextField.text!)&password=\(passwordTextField.text!)") as String
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let token = defaults.stringForKey("deviceToken")!
+        print(token)
+        
+        let parameterString = NSString(string:"email=\(emailTextField.text!)&password=\(passwordTextField.text!)&deviceToken=\(token)") as String
         print(parameterString)
         
         

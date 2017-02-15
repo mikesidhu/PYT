@@ -323,6 +323,12 @@ class ViewController: UIViewController, UIWebViewDelegate, apiClassDelegate {
     /// hit the api to backend for save the access token and get user data from facebook
     func getFBUserData(id:NSString,token:NSString)
     {
+        
+        //device token
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let tokendevice = defaults.stringForKey("deviceToken")!
+        print(tokendevice)
+        
         if((FBSDKAccessToken.currentAccessToken()) != nil)
         {
 
@@ -337,7 +343,7 @@ class ViewController: UIViewController, UIWebViewDelegate, apiClassDelegate {
                     {
                            // let parameterString = NSString(string:"check_fb/\(self.accessToken)") as String
                         
-                        let parameterString = NSString(string:"user_login_facebook/\(id)/\(token)") as String
+                        let parameterString = NSString(string:"user_login_facebook/\(id)/\(token)/\(tokendevice)") as String
                         
                       
                         

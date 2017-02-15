@@ -52,6 +52,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        
+        
+        
 //        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
 //        let pushNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
 //        
@@ -89,6 +92,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        defaults.setObject("58454545454545454545454545454545454545454545454545", forKey: "deviceToken")
 //        let firstLaunch = defaults.boolForKey("tutorialLaunch")
 //        
 //        
@@ -265,7 +270,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        
+        application.applicationIconBadgeNumber = 0
         
         
         return true
@@ -332,7 +337,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         myToken=myToken.stringByReplacingOccurrencesOfString(">", withString: "")
         myToken=myToken.stringByReplacingOccurrencesOfString(" ", withString: "")
         print("DEVICE TOKEN = \(myToken)")
-        //userDefaults.setObject(myToken, forKey: "deviceToken")
+       let defaults = NSUserDefaults.standardUserDefaults()
+            
+        defaults.setObject(myToken, forKey: "deviceToken")
         
         
     }
@@ -364,8 +371,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         print(userInfo)
         
-        //        let msg = "Awf"
-        //        let msg2 = userInfo["aps"]!["alert"] as! String
+                let msg = "PYT"
+                let msg2 = userInfo["aps"]!["alert"]!
+        
+        
+                print(msg2)
         //        let iduse = userInfo["userid"] as? String
         
         
@@ -382,9 +392,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
           
             
-            
-            HDNotificationView.showNotificationViewWithImage(UIImage(named: "notification")!, title: "Hiii MEssage", message: "testing Notification", isAutoHide: true, onTouch: {() -> Void in
-            })
+//            
+//            HDNotificationView.showNotificationViewWithImage(UIImage(named: "logo")!, title: "Hiii MEssage", message: "testing Notification", isAutoHide: true, onTouch: {() -> Void in
+//                
+//                application.applicationIconBadgeNumber = 0
+//            })
             
             
         }

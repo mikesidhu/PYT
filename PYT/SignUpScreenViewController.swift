@@ -265,11 +265,18 @@ class SignUpScreenViewController: UIViewController, apiClassDelegate {
         
         if allDone==true {
             
+            //device token
+            let defaults = NSUserDefaults.standardUserDefaults()
+           let token = defaults.stringForKey("deviceToken")!
+            print(token)
+            
+            
+            
             let loadingNotification = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
             loadingNotification.mode = MBProgressHUDMode.Indeterminate
             loadingNotification.label.text = "Signing Up..."
 
-            let parameterString = NSString(string:"username=\(nameTf.text!)&email=\(emailTf.text!)&password=\(passwordTf.text!)") as String
+            let parameterString = NSString(string:"username=\(nameTf.text!)&email=\(emailTf.text!)&password=\(passwordTf.text!)&deviceToken=\(token)") as String
             print(parameterString)
           
             passwordTf.resignFirstResponder()

@@ -21,7 +21,7 @@ class SocketIOManager: NSObject {
     
     ////and we’ll provide the IP address of our computer and the designated port.
     
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://pictureyourtravel.com")!)
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string: "http://www.pictureyourtravel.com")!)
     
     
     

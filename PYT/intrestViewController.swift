@@ -158,11 +158,19 @@ class intrestViewController: UIViewController, apiClassInterestDelegate {
                 
                 tagsArr = defaults.mutableArrayValueForKey("categoriesFromWeb")
                 //defaults .setValue(nil, forKey: "Interests")
+                
                 if checked.count<1 {
                     
                     if tagsArr.count<1 {
                         
-                        // apiClass.sharedInstance().postRequestCategories("", viewController: self)
+                         apiClass.sharedInstance().postRequestCategories("", viewController: self)
+                        
+                        
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), {() -> Void in
+                          self.categorytableView.reloadData()
+                            
+                        })
+                        
                         //if not then login from facebook
                         
                         

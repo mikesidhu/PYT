@@ -147,8 +147,8 @@ class apiClass: NSObject {
                                     
                                     //    let anyObj = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! [String:AnyObject]
                                     
-                                   // let result = NSString(data: data!, encoding:NSASCIIStringEncoding)!
-                                                           // print("Body: \(result)")
+                                    let result = NSString(data: data!, encoding:NSASCIIStringEncoding)!
+                                             print("Body: \(result)")
                                     
                                     let anyObj: AnyObject = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers)
                                     

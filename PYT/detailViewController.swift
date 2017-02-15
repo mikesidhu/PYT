@@ -3301,12 +3301,16 @@ class detailViewController: UIViewController, apiClassDelegate {
     @IBAction func AddCommentAction(sender: AnyObject) {
     
     
+        let imageId = self.arrayWithData[0] .valueForKey("imageId") as? String ?? ""
+        let imageThumbnail = self.arrayWithData[0] .valueForKey("standardImage") as? String ?? ""
         let nxtObj2 = self.storyboard?.instantiateViewControllerWithIdentifier("AddCommentViewController") as? AddCommentViewController
         let locationImageStr = self.arrayWithData[0] .valueForKey("locationImage") as? String ?? ""
         
-        nxtObj2!.imgUrl=locationImageStr
+       
+        var dictData = NSDictionary()
+        dictData = ["imageId": imageId, "largeImage": locationImageStr, "thumbnailImage": imageThumbnail ]
         
-        
+        nxtObj2?.dictionaryData = dictData
         self.navigationController! .pushViewController(nxtObj2!, animated: true)
     
     }
