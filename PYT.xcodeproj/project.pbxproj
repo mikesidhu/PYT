@@ -1248,7 +1248,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pictureyourtravel.pyt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/niteesh/Desktop/PYT/PYT/PYT-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/osx/Documents/PYT/PYT/PYT-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1273,7 +1273,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pictureyourtravel.pyt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/niteesh/Desktop/PYT/PYT/PYT-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/osx/Documents/PYT/PYT/PYT-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

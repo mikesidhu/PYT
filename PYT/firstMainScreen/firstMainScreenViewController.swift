@@ -407,7 +407,7 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
             heightOfTableView.constant = self.BloggersTableView.rowHeight * 3//CGFloat(trendingArray.count)
             heightOfLocationTable.constant=0
             
-            heightOfTrendingView.constant=self.view.frame.size.width - 20
+            heightOfTrendingView.constant=self.view.frame.size.width * 0.66
             
             self.heightOfcontentView.constant=self.heightOfTableView.constant + 355 + heightOfTrendingView.constant
             
@@ -466,6 +466,8 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
             
             
              self.locationtableView .reloadData()
+            heightOfTrendingView.constant=self.view.frame.size.width * 0.66
+
             print("HEIGHT   ________   \(heightOfTrendingView.constant)")
           heightOfLocationTable.constant=locationtableView.rowHeight * CGFloat (arrayOfIntrest.count)
              print("HEIGHT table   ________   \(heightOfLocationTable.constant)")
@@ -1522,12 +1524,11 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
              let cellLocation:locationsCell = tableView.dequeueReusableCellWithIdentifier("cellLocation")! as! locationsCell
             
             let LocationNameString = arrayOfIntrest.objectAtIndex(indexPath.row).valueForKey("location") as? String ?? ""
-            
+            cellLocation.backView.applyPlainShadow(cellLocation.backView)
             cellLocation.locationLabel.text = LocationNameString
-            let whiteView = cellLocation.viewWithTag(222)
-            whiteView?.layer.cornerRadius=5
-            whiteView?.clipsToBounds=true
-            
+            cellLocation.backView.layer.cornerRadius=3
+            cellLocation.backView.clipsToBounds=true
+        
               cellLocation.accessoryType = .None
              cellLocation.backgroundColor=UIColor .clearColor()
             cellLocation.markerImage.image=UIImage (named: "markerSearch")
@@ -1585,7 +1586,7 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
 
                 cell.bloggerName.text="Nitin Trehan"
                 cell.locationImage.image=UIImage (named: "img2")
-                
+        
                 cell.blogsBtnLbl .setTitle("96 Blogs", forState: UIControlState .Normal)
                 cell.likesBtnLbl .setTitle("1976 Likes", forState: UIControlState .Normal)
                 
@@ -1641,16 +1642,15 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
             cell.profileBorder.layer.cornerRadius=cell.profileBorder.frame.size.width/2
             cell.profileBorder!.clipsToBounds=true
             
-            cell.whiteView.layer.cornerRadius=5
+//            cell.whiteView.layer.cornerRadius=5
             cell.whiteView.layer.shadowColor = UIColor .lightGrayColor().CGColor
             cell.whiteView.layer.shadowOffset = CGSizeMake(0, 2.0)
             cell.whiteView.layer.shadowOpacity = 0.7
             cell.whiteView.layer.shadowRadius = 1.0
            
             cell.locationImage.contentMode = .ScaleAspectFill
-            cell.locationImage.layer.cornerRadius=4
-            cell.locationImage.clipsToBounds=true
-
+            cell.backView.layer.cornerRadius = 3.0
+            cell.backView.layer.masksToBounds = true
             
             
             return cell
@@ -1902,7 +1902,7 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
                 
                firstTrendingImage.sd_setImageWithURL(url, placeholderImage: pImage, completed: block)
                 firstTrendingImage.contentMode = .ScaleAspectFill
-                firstTrendingImage.layer.cornerRadius=4
+                firstTrendingImage.layer.cornerRadius=3
                 firstTrendingImage.clipsToBounds=true
                 
                 firstTrendingBtn.tag=0
@@ -1920,7 +1920,7 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
                 
                 secondTrendingImage.sd_setImageWithURL(url, placeholderImage: pImage, completed: block)
                 secondTrendingImage.contentMode = .ScaleAspectFill
-                secondTrendingImage.layer.cornerRadius=4
+                secondTrendingImage.layer.cornerRadius=3
                 secondTrendingImage.clipsToBounds=true
                 
                 secondTrendingBtn.tag=1
@@ -1937,7 +1937,7 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
                 
                 thirdTrendingImage.sd_setImageWithURL(url, placeholderImage: pImage, completed: block)
                 thirdTrendingImage.contentMode = .ScaleAspectFill
-                thirdTrendingImage.layer.cornerRadius=4
+                thirdTrendingImage.layer.cornerRadius=3
                 thirdTrendingImage.clipsToBounds=true
                 
                 thirdTrendingBtn.tag=2
@@ -1953,7 +1953,7 @@ class firstMainScreenViewController: UIViewController, UINavigationControllerDel
                 
                 forthTrendingImage.sd_setImageWithURL(url, placeholderImage: pImage, completed: block)
                 forthTrendingImage.contentMode = .ScaleAspectFill
-                forthTrendingImage.layer.cornerRadius=4
+                forthTrendingImage.layer.cornerRadius=3
                 forthTrendingImage.clipsToBounds=true
                 
                 forthTrendingBtn.tag=3
@@ -2086,8 +2086,36 @@ class locationsCell: UITableViewCell {
     
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var markerImage: UIImageView!
+    @IBOutlet var backView: UIView!
     
     
+}
+extension UIView
+{
+    func applyPlainShadow(view: UIView) {
+        
+        self.layer.masksToBounds=false
+        self.layer.shadowColor=UIColor.blackColor().CGColor
+        self.layer.shadowOpacity=0.4
+        self.layer.shadowRadius=10
+        self.layer.shadowOffset=self.layer.frame.size
+
+    }
+    func applyHoverShadow(view: UIView) {
+        let size = view.bounds.size
+        let width = size.width
+        let height = size.height
+        
+        var ovalRect = CGRect(x: 5, y: height + 5, width: width - 10, height: 15)
+        var path = UIBezierPath(roundedRect: ovalRect, cornerRadius: 10)
+        
+        var layer = view.layer
+        layer.shadowPath = path.CGPath
+        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+    }
 }
 
 
