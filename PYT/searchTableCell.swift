@@ -13,7 +13,6 @@ class searchTableCell: UITableViewCell {
     
     @IBOutlet var locationImage: UIImageView!
     
-    @IBOutlet var backView: UIView!
     
     @IBOutlet var profileImage: UIImageView!
     
