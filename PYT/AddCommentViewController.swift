@@ -25,6 +25,11 @@ class AddCommentViewController: UIViewController {
     
     
     
+    override func viewWillAppear(animated: Bool) {
+        self.tabBarController?.tabBar.hidden = true
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,6 +62,10 @@ class AddCommentViewController: UIViewController {
     
     }
     
+    @IBAction func backAction(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+        
+    }
     
     
     override func didReceiveMemoryWarning() {
